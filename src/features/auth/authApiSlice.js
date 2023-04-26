@@ -17,7 +17,7 @@ export const authApiSlice = apiSlice.injectEndpoints({
       }),
       async onQueryStarted(arg, { dispatch, queryFulfilled }) {
         try {
-          // const { data } = 
+          // const { data } =
           await queryFulfilled;
           // console.log(data);
           dispatch(logOut());
@@ -36,8 +36,7 @@ export const authApiSlice = apiSlice.injectEndpoints({
       }),
       async onQueryStarted(arg, { dispatch, queryFulfilled }) {
         try {
-          // const { data } = 
-          await queryFulfilled;
+          const { data } = await queryFulfilled;
           // console.log(data);
           const { accessToken } = data;
           dispatch(setCredentials({ accessToken }));
